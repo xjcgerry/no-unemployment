@@ -26,10 +26,10 @@
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
+        ListNode p = l1, q = l2, curr = dummyHead; //将curr指向了dummyHead的同个地址
         int carry = 0;
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
+        while (p != null || q != null) { //如果p和q都不是尾结点，进入循环
+            int x = (p != null) ? p.val : 0; //如果p不是尾结点，那么x=p.val；如果p是尾结点，那么x=0.
             int y = (q != null) ? q.val : 0;
             int sum = carry + x + y;
             carry = sum / 10;
