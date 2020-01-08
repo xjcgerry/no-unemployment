@@ -1,2 +1,3 @@
-# no-unemployment
-I don't want unemployment.
+# 我不想失业啊
+所以做题吧  
+啥也不会，菜是原罪。就算不会，抄也要抄一遍！
