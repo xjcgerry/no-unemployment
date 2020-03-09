@@ -21,9 +21,9 @@ public:
     }
 };
 ````
-迭代
-前→start→end→后
-定义tmp作为start的前驱节点
+迭代  
+前→start→end→后  
+定义tmp作为start的前驱节点  
 
 ````CPP
 class Solution {
