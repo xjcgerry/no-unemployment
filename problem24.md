@@ -15,7 +15,7 @@ public:
         if (head == NULL || head->next == NULL)
             return head;
         ListNode *next = head->next;
-        head->next = swapPairs(next->next);
+        head->next = swapPairs(next->next);//把head和next的后继结点连接
         next->next = head;
         return next;
     }
