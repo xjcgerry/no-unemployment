@@ -13,7 +13,7 @@ public:
             else if (!st.empty()&&m[st.top()] == flag-3) st.pop();
             else {istrue = false; break;}
         }
-        if (!st.empty()) istrue = false;
+        if (!st.empty()) istrue = false;    //如果前面的都匹配完了，栈里还有括号，说明invalid
         return istrue;
     }
 };
