@@ -37,3 +37,26 @@ public:
     }
 };
 ````
+利用单调递增栈
+````cpp
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& heights) {
+        int res = 0;
+        heights.push_back(0);
+        stack<int> s;
+        s.push(-1);
+        for (int i = 0; i < heights.size(); i++) {
+            if (i == 0 || s.size() == 1 || heights[i] >= heights[s.top()])
+                s.push(i);
+            while (s.size() > 1 && heights[i] < heights[s.top()]) {
+                int cur = s.top();
+                s.pop();
+                res = max(res, (i - s.top() - 1)*heights[cur]);
+            }
+            s.push(i);
+        }
+        return res;
+    }
+};
+````
