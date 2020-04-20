@@ -30,3 +30,48 @@ public:
     }
 };
 ````
+## 回溯算法
+解决一个回溯问题，实际是一个决策树的遍历过程，需要思考三个问题：
+* 路径：已做出的选择
+* 选择列表：当前可以做出的选择
+* 结束条件：也就是到达决策树底层，无法再做选择的条件。
+回溯算法的框架：
+````python
+result = []
+def backtrack(路径, 选择列表):
+    if 满足结束条件:
+        result.add(路径)
+        return
+    
+    for 选择 in 选择列表:
+        做选择
+        backtrack(路径, 选择列表)
+        撤销选择
+````
+所以本题的答案如下
+````cpp
+class Solution {
+public:
+    vector<vector<int>> result;
+
+    void backtrack(vector<int> &nums, vector<int> &track) {
+        if(track.size() == nums.size()) {
+            result.push_back(track);
+            return;
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            if (find(track.begin(), track.end(), nums[i]) != track.end())   //find函数，如果没有找到，就返回nums尾部的迭代器。否则就是找到了
+                continue;
+            track.push_back(nums[i]);
+            backtrack(nums, track);
+            track.pop_back();
+        }
+    }
+
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<int> track;
+        backtrack(nums, track);
+        return result;
+    }
+};
+````
