@@ -89,7 +89,7 @@ public:
 例如，"ace" 是 "abcde" 的子序列，但 "aec" 不是 "abcde" 的子序列。两个字符串的「公共子序列」是这两个字符串所共同拥有的子序列。
 
 若这两个字符串没有公共子序列，则返回 0。
-![image](https://github.com/xjcgerry/no-unemployment/blob/master/images/1143-1.jpg)
+![image](https://github.com/xjcgerry/no-unemployment/blob/master/images/1143-2.png)
 
 ````cpp
 class Solution {
