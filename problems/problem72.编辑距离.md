@@ -1,5 +1,5 @@
 `做这类题最好先把dp表画出来，填好之后分析状态转移方程`
-# 72. 编辑距离
+# [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
 给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。
 
 你可以对一个单词进行如下三种操作：
@@ -48,7 +48,7 @@ public:
 };
 ````
 
-# 583. 两个字符串的删除操作
+# [583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings/)
 给定两个单词 word1 和 word2，找到使得 word1 和 word2 相同所需的最小步数，每步可以删除任意一个字符串中的一个字符。
 
 ````
@@ -89,6 +89,7 @@ public:
 例如，"ace" 是 "abcde" 的子序列，但 "aec" 不是 "abcde" 的子序列。两个字符串的「公共子序列」是这两个字符串所共同拥有的子序列。
 
 若这两个字符串没有公共子序列，则返回 0。
+![image](https://github.com/xjcgerry/no-unemployment/blob/master/images/1143-1.jpg)
 
 ````cpp
 class Solution {
