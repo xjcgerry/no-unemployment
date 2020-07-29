@@ -11,7 +11,7 @@ public:
 			return;
 		}
 		for (int i = start; i < candidates.size() && sum + candidates[i] <= target; i++) {
-			if (i > start && candidates[i] == candidates[i - 1])    //重复的数剪枝
+			if (i > start && candidates[i] == candidates[i - 1])    //在同一层里面只用一次这个数字
 				continue;
 			cur.push_back(candidates[i]);
 			DFS(i + 1, sum + candidates[i], target);
