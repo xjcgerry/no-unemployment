@@ -10,6 +10,7 @@ public:
             return;
         }
         for (int i = start; i < candidates.size() && target - candidates[i] >= 0; i++) {
+            //因为可以重复使用一个数字，所以依然从start开始，看这个数字能不能用
             //start之前的数因为之前的分支搜索过了，所以会产生重复
             //target - candidates[i] >= 0的条件相当于是剪枝
             cur.push_back(candidates[i]);
