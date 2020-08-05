@@ -19,10 +19,10 @@ public:
         for (int j = 1; j < size; j++) {
             for (int i = 0; i < j; i++) {
                 if (s[i] == s[j]) {
-                    if (j - i <3)
+                    if (j - i <3)   //子串长度小于等于3，只要首尾字符相等就是回文子串了
                         dp[i][j] = true;
                     else
-                        dp[i][j] = dp[i+1][j-1];
+                        dp[i][j] = dp[i+1][j-1];    //j-1列的dp是先计算出来的，所以dp[i][j]可以直接继承它的结果
                 } else {
                     dp[i][j] = false;
                 }
