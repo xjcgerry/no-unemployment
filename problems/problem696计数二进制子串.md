@@ -49,7 +49,7 @@ int countBinarySubstrings(string s)
 }
 ````
 
-#2、中心扩展法
+# 2、中心扩展法
 从一对不同的0和1开始，两边扩展，与同边的数字相等就+1，否则就往后寻找下一对0和1。
 ````cpp
 class Solution {
